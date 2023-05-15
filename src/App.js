@@ -9,14 +9,14 @@ function App() {
   }
 
   return (
-  
-   <div className="App"> 
-   <Search 
-   onSearchChange = {handleOnSearchChange}
-    />
-   </div>
+
+    <div className="App">
+      <Search
+        onSearchChange={handleOnSearchChange}
+      />
+    </div>
   );
 }
 
-export default App ;
+export default App;
 
