@@ -34,7 +34,7 @@
   text-align: right;
 }
 
-.min-max {
+.min-max-temp {
   color: #757575;
 }
 
@@ -55,6 +55,7 @@
   display: flex;
   height: 30px;
   justify-content: space-between;
+  row-gap: 0;
 }
 
 .daily-details-grid-item label:first-child {
