@@ -70,3 +70,8 @@
 .parameter-label.top {
   border-bottom: 1px solid #fff;
 }
+
+.background-image{
+  width:50%;
+  padding:5%;
+}

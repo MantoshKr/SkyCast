@@ -1,5 +1,9 @@
 import "./current-weather.css"
 
+
+// const weatherImageURL = `background-image/${data.weather[0].icon}.png`
+
+
 const CurrentWeather = ({ data }) => {
     return (
 
@@ -8,8 +12,12 @@ const CurrentWeather = ({ data }) => {
                 <div>
                     <p className="city">{data.city}</p>
                     <p className="weather-description">{data.weather[0].description}</p>
+                  
+                        <img alt="background-image" className="background-image" src={`background-image/${data.weather[0].icon}.png`} style={{ backgroundImage: `url(${`background-image/${data.weather[0].icon}.png`})` }}/>
+                   
                 </div>
                 <img alt="weather" className="weather-icon" src={`icons/${data.weather[0].icon}.png`} />
+
             </div>
             <div className="bottom">
                 <p className="temperature">{Math.round(data.main.temp)} °C</p>
