@@ -18,12 +18,12 @@ const Forecast = ({ data }) => {
         <div>
 
             <label className="title">Daily</label>
-            <Accordion allowZeroExpanded>
+            <Accordion allowZeroExpanded className="accordion">
                 {data.list.splice(0, 7).map((item, idx) => (
                     <AccordionItem key={idx}>
-                        <AccordionItemHeading>
-                            <AccordionItemButton>
-                                <div className="daily-item">
+                        <AccordionItemHeading className="accordion-item-heading">
+                            <AccordionItemButton className="accordion-item-button">
+                                <div className="daily-item" style={{ backgroundImage: `url(${`background-image/${item.weather[0].icon}.png`})` }} >
                                     <img alt="weather" className="icon-small" src={`icons/${item.weather[0].icon}.png`} />
                                     <label className="day">{forecastDays[idx]}</label>
                                     <label className="description">{item.weather[0].description}</label>
@@ -32,7 +32,7 @@ const Forecast = ({ data }) => {
                             </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel>
-                            <div className="daily-details-grid">
+                            <div className="daily-details-grid" style={{ backgroundImage: `url(${`background-image/${item.weather[0].icon}.png`})` }} >
                                 <div className="daily-details-grid-item">
                                     <label className="pressure">Pressure </label>
                                     <label className="pressure">{item.main.pressure}hpa</label>
